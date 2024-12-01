@@ -18,15 +18,16 @@ The model used for the analysis can be found at [CancerSgnalling.JSON](https://b
  - > ```Error```: ```""``` shows us that there are no errors during execution.
  - > ```Ticks```: This is a list of time stamps towards stable converging of the network. A tick has ```Time``` of snapshot, and list of all```Variables```.
 >
-> For example: ``` { "Status": "Stabilizing", "Error": "", "Ticks": [ { "Time": 36, "Variables": [ {"Id": 2, "Lo": 0, "Hi": 0}, {"Id": 3, "Lo": 0, "Hi": 1}, ... ] }, ... ] }```
+> For example:\
+> ``` { "Status": "Stabilizing", "Error": "", "Ticks": [ { "Time": 36, "Variables": [ {"Id": 2, "Lo": 0, "Hi": 0}, {"Id": 3, "Lo": 0, "Hi": 1}, ... ] }, ... ] }```\
 > With this particular ```CancerSignalling``` model, the network is stable after every knockout. This means that the network **converges** and the model has reached a stable state where the removal of certain nodes does not significantly alter it's overall behavior.
 
 
 - ```script4.py```:
 > The summary of the node states across all output files is saved as ```variable_changes_summary1.csv```, found under the output directory. This file makes it easier to see differences across knockouts and analyze dependencies between nodes.
-> This table sorts the nodes numerically so it is clear which node has the most impact on the functionality of the network.
-> We see that the network stabilizes regardless of which node is knocked out, evident from the ```Status: Stabilizing``` of all output files.
-> The table stores the ```(Lo, Hi)``` values which remain the same across all knockouts.
+> This table sorts the nodes numerically so it is clear which node has the most impact on the functionality of the network.\
+> We see that the network stabilizes regardless of which node is knocked out, evident from the ```Status: Stabilizing``` of all output files.\
+> The table stores the ```(Lo, Hi)``` values which remain the same across all knockouts.\
 > The **_critical node_** whose knockout causes major changes in the network's behavior is **<ins>Node 2</ins>**. The ```output_2.json``` file reveals distinct stabilization states for node 2. 
 
 
