@@ -1,6 +1,6 @@
 # BMA Cancer Signalling Network Analysis
 
-The model used for the analysis can be found at [CancerSgnalling.JSON](https://biomodelanalyzer.org/preloaded/CancerSignalling.json).
+The model used for the analysis can be found at [CancerSignalling.JSON](https://biomodelanalyzer.org/preloaded/CancerSignalling.json).
 
 ## This project has four python scripts
 - ```script.py```:
